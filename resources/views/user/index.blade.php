@@ -10,7 +10,7 @@
     <h1>Users list: </h1>
         <ul>
             @forelse ($users as $user )
-                <li> {{ $user-> name}} </li>   
+                <li> {{ $user-> name}}, {{$user-> age}} years old </li>   
             @empty
                    <li>The user list is empty.</li> 
             @endforelse  
