@@ -7,6 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <h1>Users list: </h1>
+        <ul>
+            @forelse ($users as $user )
+                <li> {{ $user-> name}} </li>   
+            @empty
+                   <li>The user list is empty.</li> 
+            @endforelse  
+        </ul> 
 </body>
 </html>
