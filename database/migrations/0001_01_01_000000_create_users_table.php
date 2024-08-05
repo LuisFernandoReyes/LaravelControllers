@@ -17,6 +17,9 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->unsignedInteger('age')->default(18);
+            $table->string('address')->nullable();
+            $table->unsignedBigInteger('zip_code')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
